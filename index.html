@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f2ea">
+
+    <title>Daily Ritual | Create Your Account</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+
+        <!-- Welcome panel: retain your original section here if different -->
+        <section class="welcome-section" aria-label="Daily Ritual introduction">
+            <div class="welcome-decoration decoration-one"></div>
+            <div class="welcome-decoration decoration-two"></div>
+
+            <a class="brand" href="#" aria-label="Daily Ritual home">
+                <img
+                    class="brand-logo"
+                    src="images/coffee-beans.png"
+                    alt=""
+                    onerror="this.style.display='none'"
+                >
+                <span>Daily Ritual</span>
+            </a>
+
+            <div class="welcome-content">
+                <p class="eyebrow">SLOW MORNINGS. BETTER DAYS.</p>
+
+                <h1>
+                    Make room for a little
+                    <span>everyday magic.</span>
+                </h1>
+
+                <p class="welcome-description">
+                    Great coffee is more than a drink.
+                    It's a moment to pause, reset, and enjoy
+                    the little things that make a day special.
+                </p>
+
+                <div class="welcome-divider">
+                    <span></span>
+                    <span class="divider-dot"></span>
+                    <span></span>
+                </div>
+
+                <blockquote>
+                    “A little ritual can turn an ordinary
+                    morning into something wonderful.”
+                </blockquote>
+            </div>
+
+            <div class="welcome-footer">
+                <span>MADE FOR YOUR EVERYDAY MOMENTS</span>
+                <span class="footer-mark">DR. / 01</span>
+            </div>
+        </section>
+
+        <!-- Registration panel -->
+        <section class="form-section" aria-labelledby="formHeading">
+            <div class="form-card">
+
+                <div class="form-topline">
+                    <span class="form-kicker">YOUR NEXT CHAPTER</span>
+                    <span class="form-step">01 <span>/</span> 01</span>
+                </div>
+
+                <div class="cup-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <path d="M10 19H34V30C34 35 30 38 25 38H19C14 38 10 34 10 29V19Z"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linejoin="round"/>
+                        <path d="M34 22H38C42 22 42 30 36 30H34"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round"/>
+                        <path d="M16 12C13 9 18 7 16 4M24 12C21 9 26 7 24 4"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round"/>
+                        <path d="M8 42H39" stroke="currentColor"
+                              stroke-width="1.7" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <h2 id="formHeading" class="form-heading">
+                    Make yourself<br>at home.
+                </h2>
+
+                <p class="form-description">
+                    Create your account and make a little
+                    space for the things you love.
+                </p>
+
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="e.g. Alex Morgan"
+                            autocomplete="name"
+                            required
+                            aria-describedby="nameError"
+                            aria-invalid="false"
+                        >
+                        <p class="error" id="nameError" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            inputmode="email"
+                            required
+                            aria-describedby="emailError"
+                            aria-invalid="false"
+                        >
+                        <p class="error" id="emailError" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Create password</label>
+                            <span class="label-note">6+ characters</span>
+                        </div>
+
+                        <div class="password-box">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                                aria-describedby="passwordError strengthText"
+                                aria-invalid="false"
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                Show
+                            </button>
+                        </div>
+
+                        <p class="error" id="passwordError" aria-live="polite"></p>
+
+                        <div class="strength-track">
+                            <span
+                                id="strengthBar"
+                                role="progressbar"
+                                aria-label="Password strength"
+                                aria-valuemin="0"
+                                aria-valuemax="4"
+                                aria-valuenow="0"
+                            ></span>
+                        </div>
+
+                        <p class="strength-text" id="strengthText" aria-live="polite">
+                            Use at least 6 characters.
+                        </p>
+                    </div>
+
+                    <button type="submit" id="submitBtn" disabled>
+                        Create my account
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p
+                        id="successMessage"
+                        class="success-message"
+                        role="status"
+                        tabindex="-1"
+                        hidden
+                    ></p>
+                </form>
+
+                <div class="form-footer">
+                    <span class="footer-lock" aria-hidden="true">◇</span>
+                    Your details stay private. Just coffee-shop comfort.
+                </div>
+            </div>
+
+            <p class="page-caption">
+                A GOOD DAY STARTS WITH A SMALL RITUAL.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
